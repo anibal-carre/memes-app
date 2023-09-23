@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 import html2canvas from "html2canvas";
+import fire from "./assets/fire.jpg";
+import futurama from "./assets/futurama.jpg";
+import history from "./assets/history.jpg";
+import matrix from "./assets/matrix.jpg";
+import philoso from "./assets/philoso.jpg";
+import smart from "./assets/smart.jpg";
 
 function App() {
   const [linea1, setLinea1] = useState("");
@@ -32,12 +38,12 @@ function App() {
   return (
     <div className="App">
       <select onChange={onChangeImagen}>
-        <option value="fire">Fire</option>
-        <option value="futurama">Futurama</option>
-        <option value="history">History</option>
-        <option value="matrix">Matrix</option>
-        <option value="philosoraptor">Philosoraptor</option>
-        <option value="smart">smart Guy</option>
+        <option value={fire}>Fire</option>
+        <option value={futurama}>Futurama</option>
+        <option value={history}>History</option>
+        <option value={matrix}>Matrix</option>
+        <option value={philoso}>Philosoraptor</option>
+        <option value={smart}>smart Guy</option>
       </select>
       <br />
 
@@ -51,7 +57,7 @@ function App() {
         <span>{linea1}</span>
         <br />
         <span>{linea2}</span>
-        <img src={"/public/" + imagen + ".jpg"} />
+        <img src={imagen} />
       </div>
     </div>
   );
